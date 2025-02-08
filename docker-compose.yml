@@ -6,6 +6,10 @@ services:
     restart: always
     ports:
       - "8081:80"
+    volumes:
+      - ./site:/usr/local/apache2/htdocs
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./apache/vhost.conf:/usr/local/apache2/conf/extra/vhost.conf
 
   db:
     platform: linux/x86_64
