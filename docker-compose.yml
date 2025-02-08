@@ -1,5 +1,12 @@
 services:
 
+  apache:
+    image: httpd:latest
+    container_name: apache_server
+    restart: always
+    ports:
+      - "8081:80"
+
   db:
     platform: linux/x86_64
     image: mysql:5.7
