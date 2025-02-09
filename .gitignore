@@ -1,0 +1,17 @@
+# Ignore all database files
+/var/lib/mysql/
+
+# Allow SQL dump files
+!/var/lib/mysql/*.sql
+
+# Ignore InnoDB logs and temporary files
+ib_logfile*
+ibdata*
+*.pid
+*.sock
+*.err
+*.cnf
+*.frm
+*.MYD
+*.MYI
+*.ibd
