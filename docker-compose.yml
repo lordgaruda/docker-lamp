@@ -1,16 +1,13 @@
 services:
 
-  apache:
-    image: httpd:latest
-    container_name: apache_server
-    restart: always
+  web:
+    image: php:8-apache
+    container_name: php-apache-container
     ports:
-      - "8081:80"
+      - "8080:80"
     volumes:
-      - ./site:/usr/local/apache2/htdocs
-      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
-      - ./apache/vhost.conf:/usr/local/apache2/conf/extra/vhost.conf
-
+      - ./site:/var/www/html
+      
   db:
     platform: linux/x86_64
     image: mysql:5.7
