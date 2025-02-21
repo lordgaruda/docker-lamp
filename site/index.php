@@ -19,6 +19,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
         echo "Connected to MySQL successfully!";
+        $conn->close();
         ?>
     </p>
     
