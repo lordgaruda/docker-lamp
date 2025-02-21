@@ -14,11 +14,12 @@
     <h2>MySQL Status:</h2>
     <p>
         <?php
-        $conn = new mysqli(getenv('MYSQL_HOST') ?: 'db', getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), getenv('MYSQL_DATABASE'));
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        echo "Connected to MySQL successfully!";
+       $conn = new mysqli("db", "phpuser", "Php@dm!n", "phpdb");
+       if ($conn->connect_error) {
+           die("Connection failed: " . $conn->connect_error);
+       }
+       echo "MySQL connected!";
+       $conn->close();
         ?>
     </p>
     

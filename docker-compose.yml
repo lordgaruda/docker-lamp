@@ -1,15 +1,16 @@
-version: '3.8'
-
 services:
-
   web:
-    image: php:8-apache
+    build: .
     container_name: php-apache-container
     ports:
       - "8080:80"
     volumes:
       - ./site:/var/www/html
     restart: always
+    depends_on:
+      - db
+    networks:
+      - mysql-phpmyadmin
 
   db:
     platform: linux/x86_64
