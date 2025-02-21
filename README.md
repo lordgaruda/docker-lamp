@@ -43,9 +43,11 @@ sudo docker-compose up -d
 - Image: `mysql:5.7`
 - Data stored in the `db_data` volume.
 - Environment Variables:
-  - Root Password: `Root@dm!n`
-  - Database Name: `phpdb`
-  - User Password: `Php@dm!n`
+  - for environment just rename file sample.env to .env
+
+```
+cp sample.env .env
+```
 - Ports: `3306:3306`
 
 ### PHPMyAdmin
@@ -58,9 +60,6 @@ To stop the running containers, use:
 ```sh
 docker-compose down
 ```
-
-## Persistent Data
-- MySQL data is stored in the `db_data` volume to ensure persistence across container restarts.
 
 ## Notes
 - Ensure that the `site` directory exists in your project root for PHP files.
