@@ -16,7 +16,7 @@ sudo apt install docker.io docker-compose
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/lordgaruda/docker-lamp.git
+git clone https://github.com/lordgaruda/web-containerizer.git
 cd docker-lamp
 ```
 
@@ -27,9 +27,9 @@ sudo docker-compose up -d
 ```
 
 ### 3. Access the Services
-- **Web Server (PHP + Apache)**: [http://localhost:8080](http://localhost:8080)
-- **PHPMyAdmin**: [http://localhost:8090](http://localhost:8090)
-- **MySQL Database**: Accessible on `localhost:3306`
+- **Web Server (PHP + Apache)**: [http://<IP>:8080](http://<IP>:8080)
+- **PHPMyAdmin**: [http://<IP>:8090](http://<IP>:8090)
+- **MySQL Database**: Accessible on `db:3306`
 
 ## Configuration Details
 
