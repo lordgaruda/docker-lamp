@@ -15,3 +15,5 @@ ibdata*
 *.MYD
 *.MYI
 *.ibd
+
+.env
